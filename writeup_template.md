@@ -15,7 +15,7 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./DrawLinesOnLanesOutput.png "Output image after detecting lane lines"
+[image1]: ./DrawLinesOnLanesOutput.png "Output image after detecting lane lines after averaging"
 [image2]: ./DrawLinesOnLanesBeforeAvg.png "Output image after detecting lane lines before averaging left and right lines"
 
 ---
@@ -39,13 +39,11 @@ My pipeline consisted of 5 steps.
 ### 2. Identify potential shortcomings with your current pipeline
 
 
-One potential shortcoming would be what would happen when ... 
+* One potential shortcoming would be what would happen when the lane lines are not straight and have a curve to it, this algorithm might not be sufficient to accurately detect lane lines. 
 
-Another shortcoming could be ...
+* Another shortcoming could be that if you do not tune your hough line parameters accurately, it might not detect enough slope points for the lines and the algorithm might exit out and produce NaN
 
 
 ### 3. Suggest possible improvements to your pipeline
 
-A possible improvement would be to ...
-
-Another potential improvement could be to ...
+* A possible improvement would be to consider transforming the image to a different view and then also consider the curvature of the road.
