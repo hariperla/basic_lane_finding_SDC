@@ -24,7 +24,7 @@ The goals / steps of this project are the following:
 
 ### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
-My pipeline consisted of 5 steps. 
+My pipeline consisted of 6 steps. This pipeline assumes all the images are of the same size. 
 * First I converted the image to grayscale. 
 * On the grayscale image, I used the gaussian_blur() helper function with a kernel size of 9 to help detect the right edges and gradients * in the image. After trying out a kernel size of 5,7 and 9, I felt 9 gave me an optimal image. 
 * After using the gaussian_blur() helper function, I ran the canny() helper function to detect edges in the gaussian blurred image
@@ -43,7 +43,11 @@ My pipeline consisted of 5 steps.
 
 * Another shortcoming could be that if you do not tune your hough line parameters accurately, it might not detect enough slope points for the lines and the algorithm might exit out and produce NaN
 
+* This pipeline assumes all the images are of the same size and if we have different sizes.
+
 
 ### 3. Suggest possible improvements to your pipeline
 
 * A possible improvement would be to consider transforming the image to a different view and then also consider the curvature of the road.
+
+* We need to consider the possibility of reshaping the images to all be of the same size.
