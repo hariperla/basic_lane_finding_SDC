@@ -16,6 +16,7 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./DrawLinesOnLanesOutput.png "Output image after detecting lane lines"
+[image2]: ./DrawLinesOnLanesBeforeAvg.png "Output image after detecting lane lines before averaging left and right lines"
 
 ---
 
@@ -29,12 +30,10 @@ My pipeline consisted of 5 steps.
 * After using the gaussian_blur() helper function, I ran the canny() helper function to detect edges in the gaussian blurred image
 * Since we do not want to detect lines in the entire image, we can create a region of interest using the region_of_interest() function which takes in the canny edge image and uses an open CV function called cv2.fillPoly to create a region of interest by taking in vertices *from the user. We can create a masked image from this. 
 * We not have to perform a hough transform on the image to find lines. Hough transform provides us with different parameters like rho, theta,min line width, max line gap etc.. to help identify the set of lines we want detected. Tuning these parameters will help us identify the right set of lane lines.
-
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
-
-If you'd like to include images to show how the pipeline works, here is how to include an image: 
+* In order to draw a single line on the left and right lanes, I modified the draw_lines() function by calculating the average left and right slopes for the lines identified by the hough transform. Below is an image showing the output after the draw_lines() function has been applied to the image after following the steps above. If we do not average the lines that are detected through the hough transform, the output would look like 2nd image. 
 
 ![alt text][image1]
+![alt text][image2]
 
 
 ### 2. Identify potential shortcomings with your current pipeline
