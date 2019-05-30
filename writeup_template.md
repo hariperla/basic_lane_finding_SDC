@@ -17,7 +17,6 @@ The goals / steps of this project are the following:
 
 [image1]: ./DrawLinesOnLanesOutput.png "Output image after detecting lane lines after averaging"
 [image2]: ./DrawLinesOnLanesBeforeAvg.png "Output image after detecting lane lines before averaging left and right lines"
-[video1]: ./solidWhiteRight.mp4 "Output of the script on video"
 
 ---
 
@@ -35,7 +34,8 @@ My pipeline consisted of 6 steps. This pipeline assumes all the images are of th
 
 ![alt text][image1]
 ![alt text][image2]
-![alt_text][video1]
+
+* Please refer to solidWhiteRight.mp4 video to check out how the script worked on a video file. 
 
 
 ### 2. Identify potential shortcomings with your current pipeline
